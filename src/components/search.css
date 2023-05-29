@@ -1,0 +1,38 @@
+.search{
+    float: left;
+    width: 450px;
+    height: 90%;
+    position:absolute;
+    left: 1460px;
+    background-color: rgb(240, 240, 234);
+    padding-top: 100px;
+
+}
+.term{
+    display: flex;
+}
+.graphType{
+    position: relative;
+    left: 4%;
+    width: 92%;
+}
+
+.target{
+    position: relative;
+    background-color: rgb(214, 215, 199);
+    width: 410px;
+    height: 70%;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.button{
+    width: 380px;
+    position: relative;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
