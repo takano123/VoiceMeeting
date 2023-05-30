@@ -48,8 +48,11 @@ const BarOptions = {
     colors: {
       forceOverride: true
     }
-  }
-
+  },
+  legend: {                  
+      position: "bottom",     
+  },
+  
 };
 
 
@@ -61,11 +64,18 @@ const RadarOptions = {
       max: 100,
       stepSize: 10,
     },
-    plugins: {
-      colors: {
-        forceOverride: true
-      }
-    }
+  plugins: {
+    colors: {
+      forceOverride: true
+    },
+    legend: {                   
+      position:'top',    
+      labels: {
+        padding:30,
+        boxWidth:20
+      },
+  },
+  },           
 
 }
 
@@ -88,7 +98,10 @@ const LineOptions = {
     colors: {
       forceOverride: true
     }
-  }
+  },
+  legend: {                   
+    position: "bottom",                    
+  },
 
 }
 
