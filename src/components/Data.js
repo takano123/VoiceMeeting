@@ -35,6 +35,23 @@ function Data(props) {
     getDatas()
   },[props.startDate,props.finishDate,props.typeData,props.Department])
 
+   useEffect(() => {
+    //APIでデータを取得
+    const getDatas = async () => {
+      console.log(props.Department)
+      const baseUrl = 'https://fv5enkj0rd.execute-api.ap-northeast-1.amazonaws.com/getVoiceMeetingResult'
+      const result = await axios.post(baseUrl, {
+        startDate: props.startDate.toISOString().slice(0,10).replace(/(\d\d\d\d)-(\d\d)-(\d\d)/g,'$1/$2/$3'),
+        endDate: props.finishDate.toISOString().slice(0,10).replace(/(\d\d\d\d)-(\d\d)-(\d\d)/g,'$1/$2/$3'),
+        Department: props.Department
+      })
+      if(result.data.Items.length > 0) {
+        setDatas(result.data.Items)
+      }
+    }
+    getDatas()
+  },[])
+
 
   useEffect(() => {
     if(Datas.length === 0){
