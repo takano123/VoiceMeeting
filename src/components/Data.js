@@ -77,11 +77,15 @@ function Data(props) {
                   newObj[key] = obj[key];
                 }
               }
-              return newObj;
+              const sortedObj = Object.fromEntries(Object.entries(newObj).sort((a, b) => {
+                const aNo = parseInt(a[0].substring(2));
+                const bNo = parseInt(b[0].substring(2));
+                return aNo - bNo;
+              }));
+              return sortedObj;
             });
-            
-            const result = {};
 
+            const result = {};
             for (const obj of calc) {
               for (const key in obj) {
                 const num = parseInt(obj[key]);
