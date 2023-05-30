@@ -58,8 +58,8 @@ const RadarOptions = {
   scale: 
     {
       min: 0,
-      max: 20,
-      stepSize: 2,
+      max: 100,
+      stepSize: 10,
     },
     plugins: {
       colors: {
