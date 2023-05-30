@@ -76,7 +76,7 @@ const LineOptions = {
   scales: {
     y: {
       min: 0,
-      max: 120,
+      max: 100,
     },
     x: {
       autoSkip: true,
