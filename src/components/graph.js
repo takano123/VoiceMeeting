@@ -8,6 +8,7 @@ import axios from 'axios'
 Chart.register(...registerables)
 Chart.register(Colors)
 
+
 const BarOptions = {
   spanGaps: true,
   scales: {
@@ -47,10 +48,14 @@ const BarOptions = {
   plugins: {
     colors: {
       forceOverride: true
-    }
-  },
-  legend: {                  
-      position: "bottom",     
+    },
+    legend: {                   
+      position:'top',    
+      labels: {
+        padding:30,
+        boxWidth:20
+      },
+    },
   },
   
 };
@@ -74,7 +79,7 @@ const RadarOptions = {
         padding:30,
         boxWidth:20
       },
-  },
+    },
   },           
 
 }
@@ -97,10 +102,14 @@ const LineOptions = {
   plugins: {
     colors: {
       forceOverride: true
-    }
-  },
-  legend: {                   
-    position: "bottom",                    
+    },
+    legend: {                   
+      position:'top',    
+      labels: {
+        padding:30,
+        boxWidth:20
+      },
+    },
   },
 
 }
